@@ -1,0 +1,27 @@
+import { Navigation } from "./components/Navigation";
+import { Hero } from "./components/Hero";
+import { PersonaCards } from "./components/PersonaCards";
+import { HowItWorks } from "./components/HowItWorks";
+import { SubmitInnovation } from "./components/SubmitInnovation";
+import { SocialProof } from "./components/SocialProof";
+import { Testimonials } from "./components/Testimonials";
+import { FAQ } from "./components/FAQ";
+import { CTABanner } from "./components/CTABanner";
+import { Footer } from "./components/Footer";
+
+export default function App() {
+  return (
+    <div className="min-h-screen bg-[#0a0a1a] text-white dark">
+      <Navigation />
+      <Hero />
+      <PersonaCards />
+      <HowItWorks />
+      <SubmitInnovation />
+      <SocialProof />
+      <Testimonials />
+      <FAQ />
+      <CTABanner />
+      <Footer />
+    </div>
+  );
+}
