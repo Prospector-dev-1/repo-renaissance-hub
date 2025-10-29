@@ -2,6 +2,7 @@ import { motion } from "motion/react";
 import { Button } from "./ui/button";
 import { Waves, Menu } from "lucide-react";
 import { useState } from "react";
+import { Link } from "react-router-dom";
 
 export function Navigation() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -24,23 +25,25 @@ export function Navigation() {
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
-          <div className="flex items-center gap-2">
+          <Link to="/" className="flex items-center gap-2">
             <span className="text-2xl">Fishtank</span>
-          </div>
+          </Link>
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center gap-8">
-            <a href="#how-it-works" className="text-white/70 hover:text-white transition-colors">How it Works</a>
-            <a href="/innovators" className="text-white/70 hover:text-white transition-colors">Innovators</a>
-            <a href="/creators" className="text-white/70 hover:text-white transition-colors">Creators</a>
-            <a href="/investors" className="text-white/70 hover:text-white transition-colors">Investors</a>
+            <Link to="/how-it-works" className="text-white/70 hover:text-white transition-colors">How it Works</Link>
+            <Link to="/innovators" className="text-white/70 hover:text-white transition-colors">Innovators</Link>
+            <Link to="/creators" className="text-white/70 hover:text-white transition-colors">Creators</Link>
+            <Link to="/investors" className="text-white/70 hover:text-white transition-colors">Investors</Link>
           </div>
 
           {/* CTA Buttons */}
           <div className="flex items-center gap-4">
-            <Button className="bg-gradient-to-r from-[#4FC3F7] to-[#7C4DFF] hover:opacity-90 transition-opacity rounded-xl">
-              Join Beta
-            </Button>
+            <Link to="/apply">
+              <Button className="bg-gradient-to-r from-[#4FC3F7] to-[#7C4DFF] hover:opacity-90 transition-opacity rounded-xl">
+                Join Beta
+              </Button>
+            </Link>
             <Button
               variant="ghost"
               size="icon"

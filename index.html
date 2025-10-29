@@ -10,42 +10,7 @@
     <body>
       <div id="root"></div>
       <script type="module" src="/src/main.tsx"></script>
-    
-<script>
-document.addEventListener('DOMContentLoaded', () => {
-  const mapByText = [
-    {re:/^\s*how\s*it\s*works\s*$/i, href:'/how-it-works.html'},
-    {re:/^\s*innovators?\s*$/i, href:'/innovators.html'},
-    {re:/^\s*creators?\s*$/i, href:'/creators.html'},
-    {re:/^\s*investors?\s*$/i, href:'/investors.html'},
-    {re:/apply|submit.*innovation/i, href:'/apply.html'},
-  ];
 
-  // 1) If an element has data-href, set real href to it
-  document.querySelectorAll('a[data-href]').forEach(a => {
-    const h = a.getAttribute('data-href');
-    if (h) a.setAttribute('href', h);
-  });
-
-  // 2) Rewrite any # links by visible text
-  document.querySelectorAll('a').forEach(a => {
-    const txt = (a.textContent || '').trim();
-    if (!txt) return;
-    for (const rule of mapByText) {
-      if (rule.re.test(txt)) {
-        a.setAttribute('href', rule.href);
-        a.addEventListener('click', (e) => {
-          // Make sure we don't get caught by SPA handlers adding "#"
-          e.preventDefault();
-          window.location.href = rule.href;
-        }, { once: true });
-        break;
-      }
-    }
-  });
-});
-</script>
-
-</body>
+  </body>
   </html>
   

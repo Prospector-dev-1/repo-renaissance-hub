@@ -1,11 +1,13 @@
 import { motion } from "motion/react";
 import { Lightbulb, Palette, TrendingUp, ArrowRight } from "lucide-react";
 import { Button } from "./ui/button";
+import { Link } from "react-router-dom";
 
 const personas = [
   {
     icon: Lightbulb,
     title: "Innovators",
+    link: "/innovators",
     description: "Have a game-changing idea but need resources to make it real?",
     features: [
       "Submit your innovation pitch",
@@ -19,6 +21,7 @@ const personas = [
   {
     icon: Palette,
     title: "Creators",
+    link: "/creators",
     description: "Build meaningful projects with talented teams and solid funding.",
     features: [
       "Browse vetted opportunities",
@@ -32,6 +35,7 @@ const personas = [
   {
     icon: TrendingUp,
     title: "Investors",
+    link: "/investors",
     description: "Back high-potential ideas before they hit the mainstream.",
     features: [
       "Curated deal flow",
@@ -119,10 +123,10 @@ export function PersonaCards() {
                   className="w-full group/btn hover:bg-white/10 rounded-xl"
                   asChild
                 >
-                  <a href={`/learn-more.html?tab=${persona.title.toLowerCase()}`} className="flex items-center justify-center w-full">
+                  <Link to={persona.link} className="flex items-center justify-center w-full">
                     <span>Learn More</span>
                     <ArrowRight className="w-4 h-4 ml-2 group-hover/btn:translate-x-1 transition-transform" />
-                  </a>
+                  </Link>
                 </Button>
               </div>
             </motion.div>

@@ -1,6 +1,7 @@
 import { motion } from "motion/react";
 import { Button } from "./ui/button";
 import { Sparkles, Rocket, TrendingUp } from "lucide-react";
+import { Link } from "react-router-dom";
 
 export function Hero() {
   return (
@@ -51,19 +52,21 @@ export function Hero() {
             </p>
 
             <div className="flex flex-wrap gap-4 justify-center">
-              <Button
-                size="lg"
-                className="bg-gradient-to-r from-[#4FC3F7] to-[#7C4DFF] hover:opacity-90 transition-opacity rounded-2xl px-8"
-              >
-                Join the Beta
-              </Button>
+              <Link to="/apply">
+                <Button
+                  size="lg"
+                  className="bg-gradient-to-r from-[#4FC3F7] to-[#7C4DFF] hover:opacity-90 transition-opacity rounded-2xl px-8"
+                >
+                  Join the Beta
+                </Button>
+              </Link>
               <Button
                 size="lg"
                 variant="outline"
                 className="border-white/20 hover:bg-white/10 rounded-2xl px-8"
                 asChild
               >
-                <a href="/learn-more.html">Learn More</a>
+                <Link to="/how-it-works">Learn More</Link>
               </Button>
             </div>
           </motion.div>

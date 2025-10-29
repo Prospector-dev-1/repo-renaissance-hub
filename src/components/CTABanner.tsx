@@ -1,6 +1,7 @@
 import { motion } from "motion/react";
 import { Button } from "./ui/button";
 import { ArrowRight, Sparkles } from "lucide-react";
+import { Link } from "react-router-dom";
 
 export function CTABanner() {
   return (
@@ -60,13 +61,15 @@ export function CTABanner() {
               </p>
 
               <div className="flex flex-wrap gap-4 justify-center">
-                <Button
-                  size="lg"
-                  className="bg-gradient-to-r from-[#4FC3F7] to-[#7C4DFF] hover:opacity-90 transition-opacity rounded-2xl px-10 group"
-                >
-                  <span>Get Started</span>
-                  <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
-                </Button>
+                <Link to="/apply">
+                  <Button
+                    size="lg"
+                    className="bg-gradient-to-r from-[#4FC3F7] to-[#7C4DFF] hover:opacity-90 transition-opacity rounded-2xl px-10 group"
+                  >
+                    <span>Get Started</span>
+                    <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
+                  </Button>
+                </Link>
                 <Button
                   size="lg"
                   variant="outline"
