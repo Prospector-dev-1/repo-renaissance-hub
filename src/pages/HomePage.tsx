@@ -6,7 +6,6 @@ import { SocialProof } from "../components/SocialProof";
 import { Testimonials } from "../components/Testimonials";
 import { FAQ } from "../components/FAQ";
 import { CTABanner } from "../components/CTABanner";
-import { Footer } from "../components/Footer";
 
 export default function HomePage() {
   return (
@@ -19,7 +18,6 @@ export default function HomePage() {
       <Testimonials />
       <FAQ />
       <CTABanner />
-      <Footer />
     </div>
   );
 }

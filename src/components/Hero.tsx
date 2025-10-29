@@ -60,14 +60,6 @@ export function Hero() {
                   Join the Beta
                 </Button>
               </Link>
-              <Button
-                size="lg"
-                variant="outline"
-                className="border-white/20 hover:bg-white/10 rounded-2xl px-8"
-                asChild
-              >
-                <Link to="/how-it-works">Learn More</Link>
-              </Button>
             </div>
           </motion.div>
 

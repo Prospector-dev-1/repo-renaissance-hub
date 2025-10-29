@@ -1,5 +1,9 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
+import { PageHeading } from "../components/PageHeading";
+import { Section } from "../components/Section";
+import { ContentCard } from "../components/ContentCard";
+import { Button } from "../components/ui/button";
 
 type Role = "investor" | "innovator" | "creator";
 
@@ -75,7 +79,7 @@ export default function ApplyPage() {
             required={field.required}
             value={formData[field.key] || ""}
             onChange={(e) => handleInputChange(field.key, e.target.value)}
-            className="w-full px-4 py-3 rounded-xl border border-white/10 bg-[#0f1219] text-white"
+            className="w-full px-4 py-3 rounded-xl border border-white/10 bg-white/5 text-white"
           >
             <option value="">Select...</option>
             {field.options?.map((opt) => (
@@ -100,7 +104,7 @@ export default function ApplyPage() {
             required={field.required}
             value={formData[field.key] || ""}
             onChange={(e) => handleInputChange(field.key, e.target.value)}
-            className="w-full px-4 py-3 rounded-xl border border-white/10 bg-[#0f1219] text-white min-h-[120px] resize-y"
+            className="w-full px-4 py-3 rounded-xl border border-white/10 bg-white/5 text-white min-h-[120px] resize-y"
           />
         </div>
       );
@@ -119,7 +123,7 @@ export default function ApplyPage() {
           placeholder={field.placeholder}
           value={formData[field.key] || ""}
           onChange={(e) => handleInputChange(field.key, e.target.value)}
-          className="w-full px-4 py-3 rounded-xl border border-white/10 bg-[#0f1219] text-white"
+          className="w-full px-4 py-3 rounded-xl border border-white/10 bg-white/5 text-white"
         />
       </div>
     );
@@ -128,68 +132,66 @@ export default function ApplyPage() {
   const fields = fieldsByRole[role];
 
   return (
-    <div className="min-h-screen bg-[#0a0a1a] text-white" style={{ paddingTop: '100px' }}>
-      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 pb-12">
-        <section>
-          <h1 className="text-3xl md:text-4xl font-bold mb-3">Join the Fishtank Waitlist</h1>
-          <p className="text-white/50 mb-6">Tell us who you are. We'll tailor the form and keep you in the loop.</p>
-          
-          <div className="flex flex-wrap gap-3 mb-8">
-            <button
-              onClick={() => setRole("investor")}
-              className={`px-4 py-2 rounded-full border transition-colors ${
-                role === "investor"
-                  ? "border-[#4FC3F7] bg-[#4FC3F7]/20"
-                  : "border-white/10 bg-white/5 hover:border-white/20"
-              }`}
-            >
-              Investor
-            </button>
-            <button
-              onClick={() => setRole("innovator")}
-              className={`px-4 py-2 rounded-full border transition-colors ${
-                role === "innovator"
-                  ? "border-[#4FC3F7] bg-[#4FC3F7]/20"
-                  : "border-white/10 bg-white/5 hover:border-white/20"
-              }`}
-            >
-              Innovator
-            </button>
-            <button
-              onClick={() => setRole("creator")}
-              className={`px-4 py-2 rounded-full border transition-colors ${
-                role === "creator"
-                  ? "border-[#4FC3F7] bg-[#4FC3F7]/20"
-                  : "border-white/10 bg-white/5 hover:border-white/20"
-              }`}
-            >
-              Creator
-            </button>
-          </div>
+    <Section className="py-16">
+      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <PageHeading
+          title="Join the Fishtank Waitlist"
+          subtitle="Tell us who you are. We'll tailor the form and keep you in the loop."
+        />
+        
+        <div className="flex flex-wrap gap-3 mb-8">
+          <button
+            onClick={() => setRole("investor")}
+            className={`px-4 py-2 rounded-full border transition-colors ${
+              role === "investor"
+                ? "border-[#4FC3F7] bg-[#4FC3F7]/20"
+                : "border-white/10 bg-white/5 hover:border-white/20"
+            }`}
+          >
+            Investor
+          </button>
+          <button
+            onClick={() => setRole("innovator")}
+            className={`px-4 py-2 rounded-full border transition-colors ${
+              role === "innovator"
+                ? "border-[#4FC3F7] bg-[#4FC3F7]/20"
+                : "border-white/10 bg-white/5 hover:border-white/20"
+            }`}
+          >
+            Innovator
+          </button>
+          <button
+            onClick={() => setRole("creator")}
+            className={`px-4 py-2 rounded-full border transition-colors ${
+              role === "creator"
+                ? "border-[#4FC3F7] bg-[#4FC3F7]/20"
+                : "border-white/10 bg-white/5 hover:border-white/20"
+            }`}
+          >
+            Creator
+          </button>
+        </div>
 
-          <form onSubmit={handleSubmit} className="space-y-4">
-            <div className="bg-white/5 border border-white/10 rounded-2xl p-6 mb-6 space-y-4">
-              {fields.map((field) => renderField(field))}
-            </div>
+        <form onSubmit={handleSubmit} className="space-y-4">
+          <ContentCard className="mb-6 space-y-4">
+            {fields.map((field) => renderField(field))}
+          </ContentCard>
 
-            <div className="flex flex-wrap gap-3">
-              <button
-                type="submit"
-                className="px-6 py-3 bg-gradient-to-r from-[#4FC3F7] to-[#29F19C] text-[#0a0a1a] font-bold rounded-xl"
-              >
-                Join Waitlist
-              </button>
-              <Link
-                to="/"
-                className="px-6 py-3 border border-white/10 rounded-xl hover:border-white/20 transition-colors"
-              >
+          <div className="flex flex-wrap gap-3">
+            <Button
+              type="submit"
+              className="bg-gradient-to-r from-[#4FC3F7] to-[#7C4DFF] hover:opacity-90 transition-opacity rounded-xl"
+            >
+              Join Waitlist
+            </Button>
+            <Link to="/">
+              <Button variant="outline" className="border-white/20 hover:bg-white/10 rounded-xl">
                 Back to Home
-              </Link>
-            </div>
-          </form>
-        </section>
+              </Button>
+            </Link>
+          </div>
+        </form>
       </div>
-    </div>
+    </Section>
   );
 }
-

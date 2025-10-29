@@ -1,189 +1,385 @@
+import { motion } from "motion/react";
+import { Palette, Code, TrendingUp, Shield, Zap, DollarSign, Users, CheckCircle } from "lucide-react";
+import { Button } from "../components/ui/button";
 import { Link } from "react-router-dom";
 
 export default function ForCreatorsPage() {
   return (
-    <div className="min-h-screen bg-[#0a0a1a] text-white" style={{ paddingTop: '100px' }}>
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-12">
-        <h1 className="text-4xl md:text-5xl font-bold mb-6">For Creators</h1>
-        <p className="text-lg text-white/70 mb-12 max-w-4xl">
-          Work on real startups before they launch. Choose projects that match your skills, earn <strong>cash</strong>, <strong>equity</strong>, or <strong>commission</strong>, and build a portfolio with verified outcomes and milestone-linked payouts.
-        </p>
-
-        <div className="bg-white/5 border border-white/10 rounded-2xl p-6 mb-8">
-          <h2 className="text-2xl font-semibold mb-4">Who are Creators?</h2>
-          <p className="text-white/70 mb-6">Creators are the builders who turn ideas into products and growth. If you can design, code, write, market, sell, analyze, or ship—there's a seat for you in the tank.</p>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            <div className="bg-white/5 border border-white/10 rounded-xl p-6">
-              <h3 className="text-xl font-semibold mb-3">Engineering & Product</h3>
-              <ul className="list-disc list-inside space-y-2 text-white/70">
-                <li>Frontend Engineer (React/Next)</li>
-                <li>Backend Engineer (Node/Python)</li>
-                <li>Mobile Dev (React Native/Flutter)</li>
-                <li>Full‑stack Engineer</li>
-                <li>Product Manager / Product Owner</li>
-              </ul>
-            </div>
-            <div className="bg-white/5 border border-white/10 rounded-xl p-6">
-              <h3 className="text-xl font-semibold mb-3">Design & Content</h3>
-              <ul className="list-disc list-inside space-y-2 text-white/70">
-                <li>Product Designer (UI/UX)</li>
-                <li>Brand/Visual Designer</li>
-                <li>Motion/Video Editor</li>
-                <li>Content Writer / Technical Writer</li>
-                <li>No‑code Builder (Framer/Webflow)</li>
-              </ul>
-            </div>
-            <div className="bg-white/5 border border-white/10 rounded-xl p-6">
-              <h3 className="text-xl font-semibold mb-3">Growth & Ops</h3>
-              <ul className="list-disc list-inside space-y-2 text-white/70">
-                <li>Growth Marketer / Performance Ads</li>
-                <li>SEO/Content Marketer</li>
-                <li>Community & Social Manager</li>
-                <li>Sales / SDR / Partnerships</li>
-                <li>Data Analyst / RevOps</li>
-              </ul>
-            </div>
-          </div>
-          <p className="mt-6 px-3 py-2 inline-block border border-white/10 rounded-full text-white/70">
-            You can also propose a specialty—legal ops, compliance, localization, support engineering, and more.
-          </p>
+    <div className="min-h-screen bg-[#0a0a1a] text-white">
+      {/* Hero Section */}
+      <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-br from-[#0a0a1a] via-[#1a0a2e] to-[#0a0a1a]">
+          <motion.div
+            className="absolute inset-0 opacity-30"
+            animate={{
+              background: [
+                "radial-gradient(circle at 20% 50%, #7C4DFF 0%, transparent 50%)",
+                "radial-gradient(circle at 80% 50%, #4FC3F7 0%, transparent 50%)",
+                "radial-gradient(circle at 50% 80%, #7C4DFF 0%, transparent 50%)",
+                "radial-gradient(circle at 20% 50%, #7C4DFF 0%, transparent 50%)",
+              ],
+            }}
+            transition={{ duration: 10, repeat: Infinity, ease: "linear" }}
+          />
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
-          <div className="bg-white/5 border border-white/10 rounded-2xl p-6">
-            <h2 className="text-2xl font-semibold mb-4">No upfront costs</h2>
-            <p className="text-white/70">You never have to spend your own money to start. Projects are funded by innovators and/or investors. You focus on shipping; payouts are released from <strong>escrow</strong> when milestones are approved.</p>
+        <div className="container mx-auto px-4 py-20 relative z-10">
+          <div className="max-w-6xl mx-auto">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              className="text-center"
+            >
+              <motion.div
+                initial={{ opacity: 0, scale: 0.9 }}
+                animate={{ opacity: 1, scale: 1 }}
+                transition={{ delay: 0.2 }}
+                className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/5 backdrop-blur-sm border border-white/10 mb-8"
+              >
+                <Palette className="w-4 h-4 text-[#7C4DFF]" />
+                <span className="text-sm text-white/70">For Creators</span>
+              </motion.div>
+
+              <h1 className="text-5xl md:text-7xl mb-6 bg-gradient-to-r from-white via-[#7C4DFF] to-[#4FC3F7] bg-clip-text text-transparent">
+                Work on real startups
+                <br />
+                before they launch
+              </h1>
+
+              <p className="text-xl text-white/60 max-w-2xl mx-auto mb-12">
+                Choose projects that match your skills, earn cash, equity, or commission, 
+                and build a portfolio with verified outcomes and milestone-linked payouts.
+              </p>
+
+              <div className="flex flex-wrap gap-4 justify-center">
+                <Link to="/apply">
+                  <Button
+                    size="lg"
+                    className="bg-gradient-to-r from-[#7C4DFF] to-[#4FC3F7] hover:opacity-90 transition-opacity rounded-2xl px-8"
+                  >
+                    Apply as Creator
+                  </Button>
+                </Link>
+                <Link to="/investors">
+                  <Button
+                    size="lg"
+                    variant="outline"
+                    className="border-white/20 hover:bg-white/10 rounded-2xl px-8"
+                  >
+                    See investor safeguards
+                  </Button>
+                </Link>
+              </div>
+            </motion.div>
           </div>
-          <div className="bg-white/5 border border-white/10 rounded-2xl p-6">
-            <h2 className="text-2xl font-semibold mb-4">Only 5% platform commission</h2>
-            <p className="text-white/70 mb-4">We only earn when you earn: a flat <strong>5% commission</strong> on approved milestone payouts. Comparable freelancing apps charge around <strong>20%</strong>—that's <strong>75% less</strong> in platform fees for you.</p>
-            <div className="overflow-hidden border border-white/10 rounded-xl">
-              <table className="w-full border-separate border-spacing-0">
-                <thead>
-                  <tr>
-                    <th className="p-3 bg-white/5 text-left border-b border-white/10">Platform</th>
-                    <th className="p-3 bg-white/5 text-left border-b border-white/10">Creator fee</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td className="p-3 border-b border-white/10">Fishtank</td>
-                    <td className="p-3 border-b border-white/10"><strong>5%</strong></td>
-                  </tr>
-                  <tr>
-                    <td className="p-3">Typical freelance marketplace</td>
-                    <td className="p-3">~20%</td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
-            <p className="mt-4 text-sm text-white/50">Calculation: (20% − 5%) ÷ 20% = 75% less.</p>
-          </div>
+        </div>
+      </section>
+
+      {/* Who Are Creators Section */}
+      <section className="py-24 relative overflow-hidden">
+        <div className="absolute inset-0 bg-[#0a0a1a]" />
+        <div className="absolute inset-0 opacity-20">
+          <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-[#7C4DFF] rounded-full blur-[128px]" />
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
-          <div className="bg-white/5 border border-white/10 rounded-2xl p-6">
-            <h2 className="text-2xl font-semibold mb-4">How you can get paid</h2>
-            <div className="overflow-hidden border border-white/10 rounded-xl mb-4">
-              <table className="w-full border-separate border-spacing-0">
-                <thead>
-                  <tr>
-                    <th className="p-3 bg-white/5 text-left border-b border-white/10">Model</th>
-                    <th className="p-3 bg-white/5 text-left border-b border-white/10">What it means</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td className="p-3 border-b border-white/10"><strong>Cash</strong></td>
-                    <td className="p-3 border-b border-white/10">Fixed milestone fees released from escrow when work is approved.</td>
-                  </tr>
-                  <tr>
-                    <td className="p-3 border-b border-white/10"><strong>Equity</strong></td>
-                    <td className="p-3 border-b border-white/10">Equity grants that vest upon milestone acceptance (standard IP & contributor agreements apply).</td>
-                  </tr>
-                  <tr>
-                    <td className="p-3 border-b border-white/10"><strong>Cash + Equity</strong></td>
-                    <td className="p-3 border-b border-white/10">A hybrid structure—smaller cash now plus aligned upside.</td>
-                  </tr>
-                  <tr>
-                    <td className="p-3 border-b border-white/10"><strong>Commission</strong></td>
-                    <td className="p-3 border-b border-white/10">Performance pay tied to measurable outcomes (e.g., ad ROAS, qualified leads, or closed sales).</td>
-                  </tr>
-                  <tr>
-                    <td className="p-3 border-b border-white/10"><strong>Success Bonus</strong></td>
-                    <td className="p-3 border-b border-white/10">One‑time bonus when a major milestone is achieved (e.g., MVP launch, first 1k users).</td>
-                  </tr>
-                  <tr>
-                    <td className="p-3"><strong>Retainer</strong></td>
-                    <td className="p-3">Ongoing monthly support with pre‑defined deliverables and review checkpoints.</td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
-            <p className="text-white/70">All models are protected by milestone scopes, acceptance criteria, and transparent timelines.</p>
-          </div>
-          <div className="bg-white/5 border border-white/10 rounded-2xl p-6">
-            <h2 className="text-2xl font-semibold mb-4">Why creators love Fishtank</h2>
-            <ul className="list-disc list-inside space-y-3 text-white/70 mb-6">
-              <li>Work with vetted founders and investors—no flaky gigs.</li>
-              <li>Milestone clarity: scope, success criteria, and artifacts defined upfront.</li>
-              <li>Escrow and audit trail de‑risk your time.</li>
-              <li>Portfolio proof—deliverables are verifiable, not just "trust me".</li>
-            </ul>
-            <div className="flex flex-wrap gap-3">
-              <Link to="/apply" className="px-6 py-3 bg-gradient-to-r from-[#4FC3F7] to-[#29F19C] text-[#0a0a1a] font-bold rounded-xl">
-                Apply to Beta
-              </Link>
-              <Link to="/investors" className="px-6 py-3 border border-white/10 rounded-xl hover:border-white/20 transition-colors">
-                See how investors track work
-              </Link>
-            </div>
-          </div>
-        </div>
+        <div className="container mx-auto px-4 relative z-10">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-4xl md:text-5xl mb-4">Who are Creators?</h2>
+            <p className="text-xl text-white/60 max-w-2xl mx-auto">
+              Creators are the builders who turn ideas into products and growth
+            </p>
+          </motion.div>
 
-        <div className="bg-white/5 border border-white/10 rounded-2xl p-6 mb-8">
-          <h2 className="text-2xl font-semibold mb-4">Invest with zero dollars (sweat equity)</h2>
-          <p className="text-white/70 mb-4">
-            If you want upside, you can choose to be paid partly or entirely in <strong>equity</strong>. That means you're effectively investing your time instead of cash—owning a piece of what you help build.
-          </p>
-          <ul className="list-disc list-inside space-y-2 text-white/70 mb-6">
-            <li>Hybrid offers (cash + equity) keep you liquid while building long‑term value.</li>
-            <li>Equity terms are standardized, with clear vesting and cliff tied to milestones.</li>
-            <li>Your equity is recorded alongside milestone approvals for a clean paper trail.</li>
-          </ul>
-          <div className="flex flex-wrap gap-3">
-            <Link to="/apply" className="px-6 py-3 bg-gradient-to-r from-[#4FC3F7] to-[#29F19C] text-[#0a0a1a] font-bold rounded-xl">
-              Apply as a Creator
-            </Link>
-            <Link to="/investors" className="px-6 py-3 border border-white/10 rounded-xl hover:border-white/20 transition-colors">
-              See investor safeguards
-            </Link>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+            {[
+              {
+                icon: Code,
+                title: "Engineering & Product",
+                items: [
+                  "Frontend Engineer (React/Next)",
+                  "Backend Engineer (Node/Python)",
+                  "Mobile Dev (React Native/Flutter)",
+                  "Full‑stack Engineer",
+                  "Product Manager",
+                ],
+                color: "#4FC3F7",
+              },
+              {
+                icon: Palette,
+                title: "Design & Content",
+                items: [
+                  "Product Designer (UI/UX)",
+                  "Brand/Visual Designer",
+                  "Motion/Video Editor",
+                  "Content Writer",
+                  "No‑code Builder",
+                ],
+                color: "#7C4DFF",
+              },
+              {
+                icon: TrendingUp,
+                title: "Growth & Ops",
+                items: [
+                  "Growth Marketer",
+                  "SEO/Content Marketer",
+                  "Community Manager",
+                  "Sales / SDR",
+                  "Data Analyst",
+                ],
+                color: "#4FC3F7",
+              },
+            ].map((category, index) => (
+              <motion.div
+                key={category.title}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: index * 0.1 }}
+                whileHover={{ y: -8 }}
+                className="group relative"
+              >
+                <div className="absolute -inset-1 rounded-3xl opacity-0 group-hover:opacity-100 blur-xl transition-opacity duration-500"
+                  style={{
+                    background: `linear-gradient(135deg, ${category.color}40, ${category.color}20)`,
+                  }}
+                />
+                <div className="relative h-full bg-white/5 backdrop-blur-xl border border-white/10 rounded-3xl p-8 hover:border-white/20 transition-all">
+                  <div
+                    className="w-16 h-16 rounded-2xl flex items-center justify-center mb-6"
+                    style={{
+                      background: `linear-gradient(135deg, ${category.color}30, ${category.color}10)`,
+                      border: `1px solid ${category.color}50`,
+                    }}
+                  >
+                    <category.icon className="w-8 h-8" style={{ color: category.color }} />
+                  </div>
+                  <h3 className="text-2xl mb-6">{category.title}</h3>
+                  <ul className="space-y-3">
+                    {category.items.map((item) => (
+                      <li key={item} className="flex items-start gap-2 text-sm text-white/70">
+                        <div
+                          className="w-1.5 h-1.5 rounded-full mt-2 flex-shrink-0"
+                          style={{ backgroundColor: category.color }}
+                        />
+                        <span>{item}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              </motion.div>
+            ))}
           </div>
-        </div>
 
-        <div className="bg-white/5 border border-white/10 rounded-2xl p-6">
-          <h2 className="text-2xl font-semibold mb-4">FAQs</h2>
-          <div className="space-y-3">
-            <details className="bg-white/5 border border-white/10 rounded-xl p-4 cursor-pointer">
-              <summary className="font-semibold cursor-pointer">Can I choose cash or equity?</summary>
-              <p className="mt-2 text-white/60">Yes. Each milestone has a pay model. You can propose cash, equity, hybrid, or commission, depending on role and goals.</p>
-            </details>
-            <details className="bg-white/5 border border-white/10 rounded-xl p-4 cursor-pointer">
-              <summary className="font-semibold cursor-pointer">How do I track approval?</summary>
-              <p className="mt-2 text-white/60">Every milestone has acceptance criteria. Once approved, escrow releases automatically.</p>
-            </details>
-            <details className="bg-white/5 border border-white/10 rounded-xl p-4 cursor-pointer">
-              <summary className="font-semibold cursor-pointer">Can I work part‑time?</summary>
-              <p className="mt-2 text-white/60">Absolutely. Many creators contribute 5–20 hours/week across 1–2 projects.</p>
-            </details>
-            <details className="bg-white/5 border border-white/10 rounded-xl p-4 cursor-pointer">
-              <summary className="font-semibold cursor-pointer">What about IP?</summary>
-              <p className="mt-2 text-white/60">Innovators own IP; you license or assign contributions per standard contributor agreements.</p>
-            </details>
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="mt-12 text-center"
+          >
+            <p className="text-white/60">
+              You can also propose a specialty—legal ops, compliance, localization, support engineering, and more.
+            </p>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* Pricing Benefits Section */}
+      <section className="py-24 relative overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-b from-[#0a0a1a] via-[#0f0a1f] to-[#0a0a1a]" />
+        
+        <div className="container mx-auto px-4 relative z-10">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-4xl md:text-5xl mb-4">Only 5% platform commission</h2>
+            <p className="text-xl text-white/60 max-w-2xl mx-auto">
+              We only earn when you earn. Comparable platforms charge around 20%—that's 75% less for you.
+            </p>
+          </motion.div>
+
+          <div className="max-w-2xl mx-auto">
+            <div className="grid grid-cols-2 gap-4 mb-8">
+              <motion.div
+                initial={{ opacity: 0, x: -30 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true }}
+                className="bg-gradient-to-br from-[#4FC3F7]/20 to-[#4FC3F7]/10 backdrop-blur-xl border-2 border-[#4FC3F7]/50 rounded-3xl p-8 text-center"
+              >
+                <div className="text-5xl font-bold mb-2 bg-gradient-to-r from-[#4FC3F7] to-[#7C4DFF] bg-clip-text text-transparent">5%</div>
+                <div className="text-white/70">Fishtank</div>
+              </motion.div>
+              <motion.div
+                initial={{ opacity: 0, x: 30 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true }}
+                className="bg-white/5 backdrop-blur-xl border border-white/10 rounded-3xl p-8 text-center"
+              >
+                <div className="text-5xl font-bold mb-2 text-white/40">~20%</div>
+                <div className="text-white/70">Typical marketplace</div>
+              </motion.div>
+            </div>
+            <p className="text-center text-white/60">
+              Calculation: (20% − 5%) ÷ 20% = 75% less platform fees
+            </p>
           </div>
         </div>
-      </div>
+      </section>
+
+      {/* Why Creators Love Section */}
+      <section className="py-24 relative overflow-hidden">
+        <div className="absolute inset-0 bg-[#0a0a1a]" />
+        
+        <div className="container mx-auto px-4 relative z-10">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-4xl md:text-5xl mb-4">Why creators love Fishtank</h2>
+            <p className="text-xl text-white/60 max-w-2xl mx-auto">
+              Built for the modern creator economy
+            </p>
+          </motion.div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl mx-auto">
+            {[
+              {
+                icon: Users,
+                title: "Vetted founders and investors",
+                description: "Work with vetted founders and investors—no flaky gigs.",
+                color: "#4FC3F7",
+              },
+              {
+                icon: CheckCircle,
+                title: "Milestone clarity",
+                description: "Scope, success criteria, and artifacts defined upfront.",
+                color: "#7C4DFF",
+              },
+              {
+                icon: Shield,
+                title: "Escrow protection",
+                description: "Escrow and audit trail de‑risk your time.",
+                color: "#4FC3F7",
+              },
+              {
+                icon: Zap,
+                title: "Portfolio proof",
+                description: "Deliverables are verifiable, not just \"trust me\".",
+                color: "#7C4DFF",
+              },
+            ].map((item, index) => (
+              <motion.div
+                key={item.title}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: index * 0.1 }}
+                whileHover={{ y: -8 }}
+                className="group relative"
+              >
+                <div className="absolute -inset-1 rounded-3xl opacity-0 group-hover:opacity-100 blur-xl transition-opacity duration-500"
+                  style={{
+                    background: `linear-gradient(135deg, ${item.color}40, ${item.color}20)`,
+                  }}
+                />
+                <div className="relative h-full bg-white/5 backdrop-blur-xl border border-white/10 rounded-3xl p-8 hover:border-white/20 transition-all">
+                  <div
+                    className="w-16 h-16 rounded-2xl flex items-center justify-center mb-6"
+                    style={{
+                      background: `linear-gradient(135deg, ${item.color}30, ${item.color}10)`,
+                      border: `1px solid ${item.color}50`,
+                    }}
+                  >
+                    <item.icon className="w-8 h-8" style={{ color: item.color }} />
+                  </div>
+                  <h3 className="text-2xl mb-4">{item.title}</h3>
+                  <p className="text-white/60">{item.description}</p>
+                </div>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <section className="py-24 relative overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-br from-[#0a0a1a] via-[#1a0a2e] to-[#0a0a1a]" />
+        <motion.div
+          className="absolute inset-0"
+          animate={{
+            background: [
+              "radial-gradient(circle at 30% 50%, #7C4DFF30 0%, transparent 50%)",
+              "radial-gradient(circle at 70% 50%, #4FC3F730 0%, transparent 50%)",
+              "radial-gradient(circle at 30% 50%, #7C4DFF30 0%, transparent 50%)",
+            ],
+          }}
+          transition={{ duration: 8, repeat: Infinity }}
+        />
+
+        <div className="container mx-auto px-4 relative z-10">
+          <motion.div
+            initial={{ opacity: 0, scale: 0.95 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            viewport={{ once: true }}
+            className="max-w-4xl mx-auto"
+          >
+            <div className="bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-2xl border border-white/20 rounded-3xl p-12 md:p-16 text-center relative overflow-hidden">
+              <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-full">
+                <div className="absolute top-0 right-1/4 w-64 h-64 bg-[#7C4DFF] rounded-full blur-[120px] opacity-20" />
+              </div>
+
+              <div className="relative z-10">
+                <motion.div
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 border border-white/20 mb-6"
+                >
+                  <Palette className="w-4 h-4 text-[#7C4DFF]" />
+                  <span className="text-sm text-white/80">Build with us</span>
+                </motion.div>
+
+                <h2 className="text-4xl md:text-6xl mb-6">
+                  Ready to build the
+                  <br />
+                  <span className="bg-gradient-to-r from-[#7C4DFF] to-[#4FC3F7] bg-clip-text text-transparent">
+                    next big thing?
+                  </span>
+                </h2>
+
+                <p className="text-xl text-white/60 max-w-2xl mx-auto mb-10">
+                  Join creators building meaningful projects with talented teams and solid funding.
+                </p>
+
+                <div className="flex flex-wrap gap-4 justify-center">
+                  <Link to="/apply">
+                    <Button
+                      size="lg"
+                      className="bg-gradient-to-r from-[#7C4DFF] to-[#4FC3F7] hover:opacity-90 transition-opacity rounded-2xl px-10"
+                    >
+                      Apply as Creator
+                    </Button>
+                  </Link>
+                </div>
+
+                <p className="mt-8 text-sm text-white/40">
+                  No upfront costs • 5% commission • Get paid for your craft
+                </p>
+              </div>
+            </div>
+          </motion.div>
+        </div>
+      </section>
     </div>
   );
 }
-

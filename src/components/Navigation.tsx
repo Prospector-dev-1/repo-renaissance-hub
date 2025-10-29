@@ -31,7 +31,6 @@ export function Navigation() {
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center gap-8">
-            <Link to="/how-it-works" className="text-white/70 hover:text-white transition-colors">How it Works</Link>
             <Link to="/innovators" className="text-white/70 hover:text-white transition-colors">Innovators</Link>
             <Link to="/creators" className="text-white/70 hover:text-white transition-colors">Creators</Link>
             <Link to="/investors" className="text-white/70 hover:text-white transition-colors">Investors</Link>
