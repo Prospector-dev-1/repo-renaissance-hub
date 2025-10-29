@@ -9,7 +9,7 @@ import {
 const faqs = [
   {
     question: "Who can join Fishtank?",
-    answer: "Fishtank is open to innovators with viable ideas, creators (developers, designers, marketers) looking for meaningful projects, and investors seeking early-stage opportunities. We're currently in private beta with a curated community.",
+    answer: "Fishtank is open to innovators with viable startups, creators (developers, designers, marketers) looking for meaningful projects, and investors seeking early-stage opportunities. We're currently in private beta with a curated community.",
   },
   {
     question: "How does the matching process work?",
@@ -17,7 +17,7 @@ const faqs = [
   },
   {
     question: "What types of projects get funded?",
-    answer: "We focus on innovative ideas across tech, healthcare, sustainability, and consumer products. Projects should demonstrate clear problem-solving potential, market viability, and scalability. Our success rate for quality submissions is 87%.",
+    answer: "We focus on innovative startups across tech, healthcare, sustainability, and consumer products. Projects should demonstrate clear problem-solving potential, market viability, and scalability. Our success rate for quality submissions is 87%.",
   },
   {
     question: "How much equity do I need to give up?",

@@ -65,9 +65,9 @@ export default function ForInvestorsPage() {
                     className="border-white/20 hover:bg-white/10 rounded-2xl px-8"
                   >
                     Learn More
-                  </Button>
-                </Link>
-              </div>
+                </Button>
+              </Link>
+            </div>
             </motion.div>
           </div>
         </div>
@@ -351,7 +351,7 @@ export default function ForInvestorsPage() {
                 </motion.div>
 
                 <h2 className="text-4xl md:text-6xl mb-6">
-                  Back high-potential ideas
+                  Back high-potential startups
                   <br />
                   <span className="bg-gradient-to-r from-[#4FC3F7] to-[#7C4DFF] bg-clip-text text-transparent">
                     before they hit mainstream
@@ -379,6 +379,6 @@ export default function ForInvestorsPage() {
           </motion.div>
         </div>
       </section>
-    </div>
+      </div>
   );
 }

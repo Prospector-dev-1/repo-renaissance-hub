@@ -38,7 +38,7 @@ const fieldsByRole: Record<Role, Field[]> = {
     { key: "building", label: "What are you building?", type: "textarea", required: true },
     { key: "website", label: "Website or Demo (optional)", type: "url", required: false },
     { key: "deck", label: "Pitch Deck (link)", type: "url", required: false },
-    { key: "stage", label: "Stage", type: "select", options: ["Idea", "MVP", "Beta", "Launched", "Scaling"], required: true },
+    { key: "stage", label: "Stage", type: "select", options: ["Early Stage", "MVP", "Beta", "Launched", "Scaling"], required: true },
   ],
 };
 

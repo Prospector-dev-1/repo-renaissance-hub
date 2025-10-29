@@ -41,14 +41,14 @@ export function Hero() {
             </motion.div>
 
             <h1 className="text-5xl md:text-7xl mb-6 bg-gradient-to-r from-white via-[#4FC3F7] to-[#7C4DFF] bg-clip-text text-transparent">
-              Where ideas meet money
+              Where startups meet capital
               <br />
-              and makers
+              and skill
             </h1>
 
             <p className="text-xl text-white/60 max-w-2xl mx-auto mb-12">
               Fishtank connects innovators with the capital and creative talent they need to
-              bring breakthrough ideas to life.
+              bring breakthrough startups to life.
             </p>
 
             <div className="flex flex-wrap gap-4 justify-center">
@@ -94,7 +94,7 @@ export function Hero() {
                   </div>
                   <h3 className="text-white mb-2">{item.title}</h3>
                   <p className="text-white/50 text-sm">
-                    {i === 0 && "Submit your breakthrough ideas"}
+                    {i === 0 && "Submit your breakthrough startup"}
                     {i === 1 && "Build the next big thing"}
                     {i === 2 && "Fund tomorrow's winners"}
                   </p>

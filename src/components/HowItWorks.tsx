@@ -4,7 +4,7 @@ import { FileText, Users, Hammer, Rocket } from "lucide-react";
 const steps = [
   {
     icon: FileText,
-    title: "Submit Your Idea",
+    title: "Submit Your Startup",
     description: "Share your innovation through our streamlined pitch process.",
     color: "#4FC3F7",
   },
@@ -48,7 +48,7 @@ export function HowItWorks() {
         >
           <h2 className="text-4xl md:text-5xl mb-4">How it works</h2>
           <p className="text-xl text-white/60 max-w-2xl mx-auto">
-            From idea to launch in four simple steps
+            From startup to launch in four simple steps
           </p>
         </motion.div>
 
@@ -114,7 +114,7 @@ export function HowItWorks() {
         >
           <div className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-gradient-to-r from-[#4FC3F7]/20 to-[#7C4DFF]/20 backdrop-blur-sm border border-white/10">
             <div className="w-2 h-2 rounded-full bg-[#4FC3F7] animate-pulse" />
-            <span className="text-sm text-white/70">Average time from idea to funding: 14 days</span>
+            <span className="text-sm text-white/70">Average time from startup to funding: 14 days</span>
           </div>
         </motion.div>
       </div>

@@ -21,7 +21,7 @@ export default function ForInnovatorsPage() {
             }}
             transition={{ duration: 10, repeat: Infinity, ease: "linear" }}
           />
-        </div>
+            </div>
 
         <div className="container mx-auto px-4 py-20 relative z-10">
           <div className="max-w-6xl mx-auto">
@@ -42,14 +42,14 @@ export default function ForInnovatorsPage() {
               </motion.div>
 
               <h1 className="text-5xl md:text-7xl mb-6 bg-gradient-to-r from-white via-[#4FC3F7] to-[#7C4DFF] bg-clip-text text-transparent">
-                Turn your concept into
+                Scale your startup with
                 <br />
-                a company
+                capital and talent
               </h1>
 
               <p className="text-xl text-white/60 max-w-2xl mx-auto mb-12">
-                Apply to the private beta, get reviewed, and—if accepted—match with investors 
-                and a vetted build team. We're selecting a limited cohort to maximize outcomes.
+                If you have a working product and need funding or a team to scale, join our waitlist. 
+                We verify your startup is legitimate, then connect you with investors and top creators.
               </p>
 
               <div className="flex flex-wrap gap-4 justify-center">
@@ -58,13 +58,13 @@ export default function ForInnovatorsPage() {
                     size="lg"
                     className="bg-gradient-to-r from-[#4FC3F7] to-[#7C4DFF] hover:opacity-90 transition-opacity rounded-2xl px-8"
                   >
-                    Apply to Beta
+                    Join Waitlist
                   </Button>
                 </Link>
               </div>
             </motion.div>
           </div>
-        </div>
+            </div>
       </section>
 
       {/* Process Section */}
@@ -81,9 +81,9 @@ export default function ForInnovatorsPage() {
             viewport={{ once: true }}
             className="text-center mb-16"
           >
-            <h2 className="text-4xl md:text-5xl mb-4">Not everyone can join</h2>
+            <h2 className="text-4xl md:text-5xl mb-4">How it works</h2>
             <p className="text-xl text-white/60 max-w-2xl mx-auto">
-              Here's the process and what makes it different
+              Simple verification, then join the waitlist
             </p>
           </motion.div>
 
@@ -91,33 +91,27 @@ export default function ForInnovatorsPage() {
             {[
               {
                 step: "1",
-                title: "Submit your innovation",
-                description: "Brief description + goal + optional deck.",
+                title: "Submit your startup",
+                description: "Show us your product, traction data, and funding goals.",
                 color: "#4FC3F7",
               },
               {
                 step: "2",
-                title: "Manual review",
-                description: "We evaluate originality, feasibility, and founder commitment.",
+                title: "Verification review",
+                description: "We verify your startup is legitimate (not a phony submission).",
                 color: "#7C4DFF",
               },
               {
                 step: "3",
-                title: "Acceptance decision",
-                description: "If accepted, you'll enter the beta pool; otherwise you receive feedback.",
+                title: "Join the waitlist",
+                description: "Once verified, you join our waitlist to access the platform.",
                 color: "#4FC3F7",
               },
               {
                 step: "4",
-                title: "Matching",
-                description: "We introduce investors & creators aligned with your domain and needs.",
+                title: "Get matched",
+                description: "We introduce investors & creators when spots open up.",
                 color: "#7C4DFF",
-              },
-              {
-                step: "5",
-                title: "Execution",
-                description: "Milestones, escrow, and dashboards keep everyone accountable.",
-                color: "#4FC3F7",
               },
             ].map((item, index) => (
               <motion.div
@@ -149,12 +143,9 @@ export default function ForInnovatorsPage() {
             ))}
           </div>
 
-          <div className="mt-12 grid grid-cols-1 md:grid-cols-2 gap-4 max-w-4xl mx-auto">
-            <div className="px-6 py-4 rounded-2xl border border-white/10 bg-white/5 backdrop-blur-sm">
-              <span className="text-sm text-white/70">Private beta: 50 innovators only</span>
-            </div>
-            <div className="px-6 py-4 rounded-2xl border border-white/10 bg-white/5 backdrop-blur-sm">
-              <span className="text-sm text-white/70">Response in ~48 hours</span>
+          <div className="mt-12 max-w-4xl mx-auto">
+            <div className="px-6 py-4 rounded-2xl border border-white/10 bg-white/5 backdrop-blur-sm text-center">
+              <span className="text-sm text-white/70">Verification within ~48 hours</span>
             </div>
           </div>
         </div>
@@ -248,9 +239,9 @@ export default function ForInnovatorsPage() {
             viewport={{ once: true }}
             className="text-center mb-16"
           >
-            <h2 className="text-4xl md:text-5xl mb-4">Your submission package</h2>
+              <h2 className="text-4xl md:text-5xl mb-4">Your startup submission</h2>
             <p className="text-xl text-white/60 max-w-2xl mx-auto">
-              What to include in your application
+              What we need to evaluate your startup
             </p>
           </motion.div>
 
@@ -258,27 +249,27 @@ export default function ForInnovatorsPage() {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               {[
                 {
-                  icon: FileText,
-                  title: "Pitch summary",
-                  description: "problem, solution, target user, why now (3–6 bullets).",
+                  icon: CheckCircle,
+                  title: "Working product",
+                  description: "A functioning product or MVP with real users or early traction.",
                   color: "#4FC3F7",
                 },
                 {
                   icon: Video,
-                  title: "Demo video (60–120s)",
-                  description: "Screen capture or prototype walk-through showing the core value.",
+                  title: "Product demo",
+                  description: "60–120s walkthrough showing your product in action (not a prototype).",
                   color: "#7C4DFF",
                 },
                 {
-                  icon: Sparkles,
-                  title: "Evidence",
-                  description: "Links to Figma, repo, mock data, or early analytics (optional but powerful).",
+                  icon: FileText,
+                  title: "Traction data",
+                  description: "User metrics, revenue, or other proof of product-market fit.",
                   color: "#4FC3F7",
                 },
                 {
-                  icon: CheckCircle,
-                  title: "Milestone plan",
-                  description: "2–4 milestones with acceptance criteria and \"done\" proof.",
+                  icon: Rocket,
+                  title: "Growth plan",
+                  description: "Clear milestones for scaling with identified resource needs.",
                   color: "#7C4DFF",
                 },
               ].map((item, index) => (
@@ -312,7 +303,7 @@ export default function ForInnovatorsPage() {
               className="mt-12 text-center"
             >
               <p className="text-white/60 max-w-2xl mx-auto">
-                Keep it simple. Investors want to quickly see <em className="text-[#4FC3F7]">what it does</em>, <em className="text-[#7C4DFF]">who it's for</em>, and <em className="text-[#4FC3F7]">how you'll prove progress</em>.
+                We're looking for startups that have <em className="text-[#4FC3F7]">validated product-market fit</em>, <em className="text-[#7C4DFF]">real traction or users</em>, and <em className="text-[#4FC3F7]">clear scaling potential</em>.
               </p>
             </motion.div>
           </div>
@@ -358,15 +349,15 @@ export default function ForInnovatorsPage() {
                 </motion.div>
 
                 <h2 className="text-4xl md:text-6xl mb-6">
-                  Turn your idea into
+                  Ready to scale your
                   <br />
                   <span className="bg-gradient-to-r from-[#4FC3F7] to-[#7C4DFF] bg-clip-text text-transparent">
-                    reality
+                    startup?
                   </span>
                 </h2>
 
                 <p className="text-xl text-white/60 max-w-2xl mx-auto mb-10">
-                  Join a select group of innovators building the next generation of breakthrough ideas.
+                  Join a select group of startups with validated products ready to scale.
                 </p>
 
                 <div className="flex flex-wrap gap-4 justify-center">
@@ -375,19 +366,19 @@ export default function ForInnovatorsPage() {
                       size="lg"
                       className="bg-gradient-to-r from-[#4FC3F7] to-[#7C4DFF] hover:opacity-90 transition-opacity rounded-2xl px-10"
                     >
-                      Apply to Beta
+                      Join Waitlist
                     </Button>
                   </Link>
                 </div>
 
                 <p className="mt-8 text-sm text-white/40">
-                  Limited spots available • Free to apply • Response in 48 hours
+                  Working product required • Free to join • Verification in 48 hours
                 </p>
               </div>
             </div>
           </motion.div>
         </div>
       </section>
-    </div>
+      </div>
   );
 }

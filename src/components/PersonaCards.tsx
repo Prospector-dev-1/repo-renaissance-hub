@@ -8,7 +8,7 @@ const personas = [
     icon: Lightbulb,
     title: "Innovators",
     link: "/innovators",
-    description: "Have a game-changing idea but need resources to make it real?",
+    description: "Have a game-changing startup but need resources to scale?",
     features: [
       "Submit your innovation pitch",
       "Get matched with investors & creators",
@@ -25,7 +25,7 @@ const personas = [
     description: "Build meaningful projects with talented teams and solid funding.",
     features: [
       "Browse vetted opportunities",
-      "Work on cutting-edge ideas",
+      "Work on cutting-edge startups",
       "Collaborate with top talent",
       "Get paid for your craft",
     ],
@@ -36,7 +36,7 @@ const personas = [
     icon: TrendingUp,
     title: "Investors",
     link: "/investors",
-    description: "Back high-potential ideas before they hit the mainstream.",
+    description: "Back high-potential startups before they hit the mainstream.",
     features: [
       "Curated deal flow",
       "Early-stage opportunities",

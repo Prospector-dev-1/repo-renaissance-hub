@@ -52,7 +52,7 @@ export function CTABanner() {
                 Ready to make your
                 <br />
                 <span className="bg-gradient-to-r from-[#4FC3F7] to-[#7C4DFF] bg-clip-text text-transparent">
-                  idea real?
+                  startup real?
                 </span>
               </h2>
 

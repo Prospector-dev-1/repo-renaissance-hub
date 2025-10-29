@@ -10,7 +10,7 @@ export function SubmitInnovation() {
   const [formData, setFormData] = useState({
     name: "",
     email: "",
-    idea: "",
+    startup: "",
     category: "",
   });
 
@@ -31,7 +31,7 @@ export function SubmitInnovation() {
         >
           <h2 className="text-4xl md:text-5xl mb-4">Submit Your Innovation</h2>
           <p className="text-xl text-white/60 max-w-2xl mx-auto">
-            Take the first step toward making your idea a reality
+            Take the first step toward making your startup a reality
           </p>
         </motion.div>
 
@@ -85,13 +85,13 @@ export function SubmitInnovation() {
               </div>
 
               <div>
-                <Label htmlFor="idea" className="text-white/90">
-                  Describe Your Idea
+                <Label htmlFor="startup" className="text-white/90">
+                  Describe Your Startup
                 </Label>
                 <Textarea
-                  id="idea"
-                  value={formData.idea}
-                  onChange={(e) => setFormData({ ...formData, idea: e.target.value })}
+                  id="startup"
+                  value={formData.startup}
+                  onChange={(e) => setFormData({ ...formData, startup: e.target.value })}
                   className="mt-2 bg-white/5 border-white/10 focus:border-[#4FC3F7] rounded-xl min-h-[120px]"
                   placeholder="What problem does it solve? What makes it unique?"
                 />

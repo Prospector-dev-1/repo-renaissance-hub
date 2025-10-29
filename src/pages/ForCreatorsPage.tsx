@@ -58,7 +58,7 @@ export default function ForCreatorsPage() {
                     size="lg"
                     className="bg-gradient-to-r from-[#7C4DFF] to-[#4FC3F7] hover:opacity-90 transition-opacity rounded-2xl px-8"
                   >
-                    Apply as Creator
+                    Join Waitlist
                   </Button>
                 </Link>
                 <Link to="/investors">
@@ -92,7 +92,7 @@ export default function ForCreatorsPage() {
           >
             <h2 className="text-4xl md:text-5xl mb-4">Who are Creators?</h2>
             <p className="text-xl text-white/60 max-w-2xl mx-auto">
-              Creators are the builders who turn ideas into products and growth
+              Creators are the builders who turn startups into products and growth
             </p>
           </motion.div>
 
@@ -170,7 +170,7 @@ export default function ForCreatorsPage() {
                         <span>{item}</span>
                       </li>
                     ))}
-                  </ul>
+              </ul>
                 </div>
               </motion.div>
             ))}
@@ -304,10 +304,10 @@ export default function ForCreatorsPage() {
                   </div>
                   <h3 className="text-2xl mb-4">{item.title}</h3>
                   <p className="text-white/60">{item.description}</p>
-                </div>
+            </div>
               </motion.div>
             ))}
-          </div>
+            </div>
         </div>
       </section>
 
@@ -362,15 +362,15 @@ export default function ForCreatorsPage() {
                 </p>
 
                 <div className="flex flex-wrap gap-4 justify-center">
-                  <Link to="/apply">
+            <Link to="/apply">
                     <Button
                       size="lg"
                       className="bg-gradient-to-r from-[#7C4DFF] to-[#4FC3F7] hover:opacity-90 transition-opacity rounded-2xl px-10"
                     >
-                      Apply as Creator
-                    </Button>
-                  </Link>
-                </div>
+                      Join Waitlist
+              </Button>
+            </Link>
+          </div>
 
                 <p className="mt-8 text-sm text-white/40">
                   No upfront costs • 5% commission • Get paid for your craft
@@ -378,8 +378,8 @@ export default function ForCreatorsPage() {
               </div>
             </div>
           </motion.div>
-        </div>
+          </div>
       </section>
-    </div>
+      </div>
   );
 }
